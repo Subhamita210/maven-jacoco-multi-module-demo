@@ -34,3 +34,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Subhamita210_maven-jacoco-multi-module-demo
+        
+      - name: Generate a coverage value
+        id: coverage
+      # Generates a GitHub Workflow output named `lines`
+        run: |
+         COVERAGE="$( parse-coverage-report )"
+         echo "##[set-output name=lines;]${COVERAGE}%"
+
+    # Use the output from the `coverage` step
+      - name: Generate the badge SVG image
+        uses: emibcn/badge-action@v1
+        with:
+          label: 'Test coverage'
+          status: ${{ steps.coverage.outputs.lines }}
+          color: 'blue,555,daf'
+          path: badge.svg
