@@ -12,6 +12,8 @@ jobs:
 
     steps:
       # ...
+      - name: Zip Folder
+      run: zip -r maven-jacoco-multi-module-demo-numbers.zip .
       - name: "Build & test"
         run: |
           pwd
@@ -27,7 +29,7 @@ jobs:
 #          files: |
 #            LICENSE.txt
 #            *.jar
-          run: zip -r maven-jacoco-multi-module-demo-numbers.zip .
+
 
 
 #name: Build
