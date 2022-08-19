@@ -11,7 +11,6 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      # ...
       - name: "Build & test"
         run: |
           pwd
@@ -28,7 +27,7 @@ jobs:
 #            LICENSE.txt
 #            *.jar
       - name: Zip Folder
-      run: zip -r maven-jacoco-multi-module-demo-numbers.zip .
+        run: zip -r maven-jacoco-multi-module-demo-numbers.zip .
 
 
 #name: Build
