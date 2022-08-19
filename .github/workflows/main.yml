@@ -27,8 +27,8 @@ jobs:
 #          files: |
 #            LICENSE.txt
 #            *.jar
-         - name: Zip Folder
-          run: zip -r maven-jacoco-multi-module-demo-numbers.zip .
+      - name: Zip Folder
+      run: zip -r maven-jacoco-multi-module-demo-numbers.zip .
 
 
 #name: Build
