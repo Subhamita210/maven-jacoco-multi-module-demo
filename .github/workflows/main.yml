@@ -11,6 +11,9 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
+      - name: Zip Folder
+        run: zip -r maven-jacoco-multi-module-demo-numbers.zip . -i .
+
       - name: "Build & test"
         run: |
           pwd
@@ -23,11 +26,9 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
-#          files: |
-#            LICENSE.txt
-#            *.jar
-      - name: Zip Folder
-        run: zip -r maven-jacoco-multi-module-demo-numbers.zip . -i .
+          files: |
+            maven-jacoco-multi-module-demo-numbers.zip
+            *.jar
 
 
 #name: Build
