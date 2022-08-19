@@ -16,17 +16,18 @@ jobs:
         run: |
           pwd
           echo "done!"
-          cd maven-jacoco-multi-module-demo-numbers
-          pwd
+#          cd maven-jacoco-multi-module-demo-numbers
+#          pwd
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
-          files: |
-            LICENSE.txt
-            *.jar
+#          files: |
+#            LICENSE.txt
+#            *.jar
+          run: zip -r maven-jacoco-multi-module-demo-numbers.zip .
 
 
 #name: Build
