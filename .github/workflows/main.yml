@@ -12,7 +12,10 @@ jobs:
 
     steps:
       - name: Zip Folder
-        run: zip -r maven-jacoco-multi-module-demo-numbers.zip ./maven-jacoco-multi-module-demo-numbers
+        run: |
+          cd maven-jacoco-multi-module-demo-numbers
+          pwd
+          zip -r maven-jacoco-multi-module-demo-numbers.zip .
 
       - name: "Build & test"
         run: |
