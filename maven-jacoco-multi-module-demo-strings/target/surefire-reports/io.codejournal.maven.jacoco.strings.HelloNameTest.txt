@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.codejournal.maven.jacoco.strings.HelloNameTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 s - in io.codejournal.maven.jacoco.strings.HelloNameTest
