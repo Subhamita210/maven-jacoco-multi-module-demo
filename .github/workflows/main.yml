@@ -1,4 +1,3 @@
----
 name: "pre-release"
 
 on:
@@ -15,8 +14,10 @@ jobs:
       # ...
       - name: "Build & test"
         run: |
+          pwd
           echo "done!"
-
+          cd maven-jacoco-multi-module-demo-numbers
+          pwd
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -26,7 +27,6 @@ jobs:
           files: |
             LICENSE.txt
             *.jar
-
 
 
 #name: Build
