@@ -16,7 +16,7 @@ jobs:
           pwd
       - name: all folders
         run: |
-          -ls
+          dpkg -l
 #          cd reports
 #          pwd
 #          zip -r reports.zip .
