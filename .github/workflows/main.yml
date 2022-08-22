@@ -32,7 +32,7 @@ jobs:
           title: "Development Build"
           files: |
             reports.zip
-            *.jar
+#            *.jar
 
 
 #name: Build
