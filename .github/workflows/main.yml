@@ -15,9 +15,9 @@ jobs:
         run: |
           pwd
       - name: all folders
+        working-directory: ./reports
         run: |
-          working-directory: ./reports
-          pwd
+         pwd
 #          zip -r reports.zip .
 #
 #      - name: "Build & test"
