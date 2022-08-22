@@ -17,6 +17,7 @@ jobs:
           pwd
           cd reports
           zip -r reports.zip .
+          ls
       - name: Fetch action
         run: |
           cd target
