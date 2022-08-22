@@ -15,28 +15,24 @@ jobs:
       - name: Zip Folder
         run: |
           pwd
-      - name: all folders
- #       working-directory: reports
-        run: |
-         pwd
          cd reports
-#          zip -r reports.zip .
-#
-#      - name: "Build & test"
-#        run: |
+          zip -r reports.zip .
+
+      - name: "Build & test"
+        run: |
+          pwd
+          echo "done!"
+#          cd maven-jacoco-multi-module-demo-numbers
 #          pwd
-#          echo "done!"
-##          cd maven-jacoco-multi-module-demo-numbers
-##          pwd
-#      - uses: "marvinpinto/action-automatic-releases@latest"
-#        with:
-#          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-#          automatic_release_tag: "latest"
-#          prerelease: true
-#          title: "Development Build"
-#          files: |
-#            reports.zip
-#            *.jar
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            reports.zip
+            *.jar
 
 
 #name: Build
