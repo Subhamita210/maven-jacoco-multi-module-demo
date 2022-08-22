@@ -15,7 +15,8 @@ jobs:
         run: |
           pwd
       - name: all folders
-        run: ls
+        run: |
+          -ls
 #          cd reports
 #          pwd
 #          zip -r reports.zip .
