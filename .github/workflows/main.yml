@@ -22,6 +22,7 @@ jobs:
         run: |
           pwd
           echo "done!"
+          ls /
 #          cd maven-jacoco-multi-module-demo-numbers
 #          pwd
       - uses: "marvinpinto/action-automatic-releases@latest"
