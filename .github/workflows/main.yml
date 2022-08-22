@@ -16,9 +16,8 @@ jobs:
           pwd
       - name: all folders
         run: |
-          dpkg -L maven-jacoco-multi-module-demo
-#          cd reports
-#          pwd
+          working-directory: ./reports
+          pwd
 #          zip -r reports.zip .
 #
 #      - name: "Build & test"
