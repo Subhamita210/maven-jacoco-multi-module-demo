@@ -18,11 +18,9 @@ jobs:
           cd reports
           zip -r reports.zip .
       - name: Fetch action
-        id: pl
-        uses: Rishabh510/Path-lister-action@master
-        with:
-          path: "maven-jacoco-multi-module-demo/"
-          type: ".zip"
+        run: |
+          cd target
+          pwd
 
       - name: "Build & test"
         run: |
