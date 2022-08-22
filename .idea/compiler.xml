@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="maven-jacoco-multi-module-demo-strings" />
-        <module name="maven-jacoco-multi-module-demo-numbers" />
-        <module name="maven-jacoco-multi-module-demo-reports" />
+        <module name="numbers" />
+        <module name="strings" />
+        <module name="reports" />
       </profile>
     </annotationProcessing>
   </component>
