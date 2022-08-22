@@ -11,13 +11,15 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
+      - uses: actions/checkout@v2
       - name: Zip Folder
         run: |
           pwd
       - name: all folders
-        working-directory: reports
+ #       working-directory: reports
         run: |
          pwd
+         cd reports
 #          zip -r reports.zip .
 #
 #      - name: "Build & test"
