@@ -14,8 +14,8 @@ jobs:
       - name: Zip Folder
         run: |
           pwd
+          ls
           cd maven-jacoco-multi-module-demo-reports
-          pwd
           zip -r maven-jacoco-multi-module-demo-reports.zip .
 
       - name: "Build & test"
