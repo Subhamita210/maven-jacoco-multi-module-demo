@@ -15,8 +15,8 @@ jobs:
         run: |
           pwd
           ls
-          cd maven-jacoco-multi-module-demo-reports
-          zip -r maven-jacoco-multi-module-demo-reports.zip .
+       #   cd maven-jacoco-multi-module-demo-reports
+        #  zip -r maven-jacoco-multi-module-demo-reports.zip .
 
       - name: "Build & test"
         run: |
